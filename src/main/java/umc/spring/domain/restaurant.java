@@ -34,8 +34,21 @@ public class restaurant extends BaseEntity {
     private Float rating;
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<mission> missionList = new ArrayList<>();
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<review> reviewList = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", rating=" + rating +
+                ", region=" + (region != null ? region.getName() : "N/A") + // region의 이름 출력
+                '}';
+    }
 }

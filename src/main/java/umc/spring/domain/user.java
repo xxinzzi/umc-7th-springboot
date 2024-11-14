@@ -51,14 +51,18 @@ public class user extends BaseEntity {
     private LocalDate inactiveDate;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<userAgree> memberAgreeList = new ArrayList<>();
+    @Builder.Default
+    private List<userAgree> userAgreeList = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<userPrefer> memberPreferList = new ArrayList<>();
+    @Builder.Default
+    private List<userPrefer> userPreferList = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<review> reviewList = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<userMission> memberMissionList = new ArrayList<>();
+    @Builder.Default
+    private List<userMission> userMissionList = new ArrayList<>();
 }
