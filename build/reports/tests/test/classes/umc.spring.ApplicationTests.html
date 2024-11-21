@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ApplicationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ApplicationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/umc.spring.html">umc.spring</a> &gt; ApplicationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.293s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">contextLoads()</td>
+<td class="success">0.293s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>00:11:54.996 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [umc.spring.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:11:55.045 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration umc.spring.Application for test class umc.spring.ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2024-11-22T00:11:55.210+09:00  INFO 16297 --- [    Test worker] umc.spring.ApplicationTests              : Starting ApplicationTests using Java 17.0.13 with PID 16297 (started by xxinzzi in /Users/xxinzzi/Desktop/UMC Spring/spring)
+2024-11-22T00:11:55.211+09:00  INFO 16297 --- [    Test worker] umc.spring.ApplicationTests              : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-11-22T00:11:55.529+09:00  INFO 16297 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-22T00:11:55.560+09:00  INFO 16297 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2024-11-22T00:11:55.783+09:00  INFO 16297 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-22T00:11:55.800+09:00  INFO 16297 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.2.Final
+2024-11-22T00:11:55.856+09:00  WARN 16297 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2024-11-22T00:11:55.894+09:00  INFO 16297 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-22T00:11:56.053+09:00  INFO 16297 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@398f0516
+2024-11-22T00:11:56.054+09:00  INFO 16297 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-22T00:11:56.061+09:00  INFO 16297 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-11-22T00:11:56.061+09:00  WARN 16297 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+Hibernate: 
+    
+    alter table mission 
+       drop 
+       foreign key FKgae6qenatvwyoxwh163hm1sp
+Hibernate: 
+    
+    alter table restaurant 
+       drop 
+       foreign key FK5seuxblbs55n1bwhvqu08dfur
+Hibernate: 
+    
+    alter table restaurant 
+       drop 
+       foreign key FKa42f32i7rvo56cb6laomg565s
+Hibernate: 
+    
+    alter table review 
+       drop 
+       foreign key FK70ry7cuti298yxet366rynxch
+Hibernate: 
+    
+    alter table review 
+       drop 
+       foreign key FKiyf57dy48lyiftdrf7y87rnxi
+Hibernate: 
+    
+    alter table review_comment 
+       drop 
+       foreign key FK9j7pkcpuestrwjre1a1902biu
+Hibernate: 
+    
+    alter table review_image 
+       drop 
+       foreign key FK16wp089tx9nm0obc217gvdd6l
+Hibernate: 
+    
+    alter table user_agree 
+       drop 
+       foreign key FKi3i51fyxc1d4dn3p88wv4c75p
+Hibernate: 
+    
+    alter table user_agree 
+       drop 
+       foreign key FKnojpc9wbyuaish283whd09md2
+Hibernate: 
+    
+    alter table user_mission 
+       drop 
+       foreign key FKdlc6c9h0rifeykrviy3fgmygv
+Hibernate: 
+    
+    alter table user_mission 
+       drop 
+       foreign key FKfsmo8ipks83kcuqtky39hxyvc
+Hibernate: 
+    
+    alter table user_prefer 
+       drop 
+       foreign key FKg4wnuh97byssbyxpulxkx9lv
+Hibernate: 
+    
+    alter table user_prefer 
+       drop 
+       foreign key FKfl00smnqwtxoq1rx8w3pp1nld
+Hibernate: 
+    
+    drop table if exists menu_category
+Hibernate: 
+    
+    drop table if exists mission
+Hibernate: 
+    
+    drop table if exists region
+Hibernate: 
+    
+    drop table if exists restaurant
+Hibernate: 
+    
+    drop table if exists review
+Hibernate: 
+    
+    drop table if exists review_comment
+Hibernate: 
+    
+    drop table if exists review_image
+Hibernate: 
+    
+    drop table if exists term
+Hibernate: 
+    
+    drop table if exists user
+Hibernate: 
+    
+    drop table if exists user_agree
+Hibernate: 
+    
+    drop table if exists user_mission
+Hibernate: 
+    
+    drop table if exists user_prefer
+Hibernate: 
+    
+    create table menu_category (
+       id bigint not null auto_increment,
+        name varchar(50) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table mission (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        deadline date,
+        mission_spec varchar(50) not null,
+        point integer,
+        restaurant_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table region (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        name varchar(50) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table restaurant (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        address varchar(50) not null,
+        name varchar(50) not null,
+        rating float(23),
+        menu_id bigint,
+        region_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table review (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        body varchar(256) not null,
+        rating float(23),
+        title varchar(30) not null,
+        restaurant_id bigint,
+        user_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table review_comment (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        body varchar(256) not null,
+        review_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table review_image (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        image_url varchar(256) not null,
+        review_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table term (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        body varchar(256) not null,
+        optional bit,
+        title varchar(20) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table user (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        address varchar(50) not null,
+        address_spec varchar(30) not null,
+        birth date,
+        email varchar(255),
+        gender VARCHAR(10),
+        image_url varchar(50) not null,
+        inactive_date date,
+        name varchar(20) not null,
+        nickname varchar(20) not null,
+        point integer default 0,
+        status VARCHAR(15) DEFAULT 'ACTIVE',
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table user_agree (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        term_id bigint,
+        user_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table user_mission (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        identification_number integer not null,
+        is_success bit not null,
+        mission_id bigint,
+        user_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table user_prefer (
+       id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        category_id bigint,
+        user_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    alter table mission 
+       add constraint FKgae6qenatvwyoxwh163hm1sp 
+       foreign key (restaurant_id) 
+       references restaurant (id)
+Hibernate: 
+    
+    alter table restaurant 
+       add constraint FK5seuxblbs55n1bwhvqu08dfur 
+       foreign key (menu_id) 
+       references menu_category (id)
+Hibernate: 
+    
+    alter table restaurant 
+       add constraint FKa42f32i7rvo56cb6laomg565s 
+       foreign key (region_id) 
+       references region (id)
+Hibernate: 
+    
+    alter table review 
+       add constraint FK70ry7cuti298yxet366rynxch 
+       foreign key (restaurant_id) 
+       references restaurant (id)
+Hibernate: 
+    
+    alter table review 
+       add constraint FKiyf57dy48lyiftdrf7y87rnxi 
+       foreign key (user_id) 
+       references user (id)
+Hibernate: 
+    
+    alter table review_comment 
+       add constraint FK9j7pkcpuestrwjre1a1902biu 
+       foreign key (review_id) 
+       references review (id)
+Hibernate: 
+    
+    alter table review_image 
+       add constraint FK16wp089tx9nm0obc217gvdd6l 
+       foreign key (review_id) 
+       references review (id)
+Hibernate: 
+    
+    alter table user_agree 
+       add constraint FKi3i51fyxc1d4dn3p88wv4c75p 
+       foreign key (term_id) 
+       references term (id)
+Hibernate: 
+    
+    alter table user_agree 
+       add constraint FKnojpc9wbyuaish283whd09md2 
+       foreign key (user_id) 
+       references user (id)
+Hibernate: 
+    
+    alter table user_mission 
+       add constraint FKdlc6c9h0rifeykrviy3fgmygv 
+       foreign key (mission_id) 
+       references mission (id)
+Hibernate: 
+    
+    alter table user_mission 
+       add constraint FKfsmo8ipks83kcuqtky39hxyvc 
+       foreign key (user_id) 
+       references user (id)
+Hibernate: 
+    
+    alter table user_prefer 
+       add constraint FKg4wnuh97byssbyxpulxkx9lv 
+       foreign key (category_id) 
+       references menu_category (id)
+Hibernate: 
+    
+    alter table user_prefer 
+       add constraint FKfl00smnqwtxoq1rx8w3pp1nld 
+       foreign key (user_id) 
+       references user (id)
+2024-11-22T00:11:56.745+09:00  INFO 16297 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-22T00:11:56.748+09:00  INFO 16297 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-22T00:11:57.026+09:00  WARN 16297 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-22T00:11:57.236+09:00  INFO 16297 --- [    Test worker] umc.spring.ApplicationTests              : Started ApplicationTests in 2.127 seconds (process running for 2.597)
+Executing findRestaurantsByNameAndRating with parameters:
+Name: 요아정
+Rating: 4.0
+Hibernate: 
+    /* select
+        restaurant 
+    from
+        Restaurant restaurant 
+    where
+        restaurant.name = ?1 
+        and restaurant.rating &gt;= ?2 */ select
+            r1_0.id,
+            r1_0.address,
+            r1_0.created_at,
+            r1_0.menu_id,
+            r1_0.name,
+            r1_0.rating,
+            r1_0.region_id,
+            r1_0.updated_at 
+        from
+            restaurant r1_0 
+        where
+            r1_0.name=? 
+            and r1_0.rating&gt;=?
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>ANTLR Tool version 4.10 used for code generation does not match the current runtime version 4.13.0
+ANTLR Runtime version 4.10 used for parser compilation does not match the current runtime version 4.13.0
+ANTLR Tool version 4.10 used for code generation does not match the current runtime version 4.13.0
+ANTLR Runtime version 4.10 used for parser compilation does not match the current runtime version 4.13.0
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.10.2</a> at 2024. 11. 22. 오전 12:11:57</p>
+</div>
+</div>
+</body>
+</html>

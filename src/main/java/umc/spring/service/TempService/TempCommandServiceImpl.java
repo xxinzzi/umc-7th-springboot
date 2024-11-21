@@ -1,14 +1,9 @@
 package umc.spring.service.TempService;
 
 import lombok.*;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service
-@RequiredArgsConstructor
-public class TempCommandServiceImpl implements TempQueryService{
+public class TempCommandServiceImpl {
 
-    @Override
-    public void CheckFlag(Integer flag) {
-
-    }
 }
