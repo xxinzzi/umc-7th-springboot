@@ -11,14 +11,14 @@ import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
- * Qregion is a Querydsl query type for region
+ * QRegion is a Querydsl query type for Region
  */
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
-public class Qregion extends EntityPathBase<region> {
+public class QRegion extends EntityPathBase<Region> {
 
-    private static final long serialVersionUID = -1868903808L;
+    private static final long serialVersionUID = 1509930656L;
 
-    public static final Qregion region = new Qregion("region");
+    public static final QRegion region = new QRegion("region");
 
     public final umc.spring.domain.common.QBaseEntity _super = new umc.spring.domain.common.QBaseEntity(this);
 
@@ -29,21 +29,21 @@ public class Qregion extends EntityPathBase<region> {
 
     public final StringPath name = createString("name");
 
-    public final ListPath<restaurant, Qrestaurant> restaurantList = this.<restaurant, Qrestaurant>createList("restaurantList", restaurant.class, Qrestaurant.class, PathInits.DIRECT2);
+    public final ListPath<Restaurant, QRestaurant> restaurantList = this.<Restaurant, QRestaurant>createList("restaurantList", Restaurant.class, QRestaurant.class, PathInits.DIRECT2);
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
 
-    public Qregion(String variable) {
-        super(region.class, forVariable(variable));
+    public QRegion(String variable) {
+        super(Region.class, forVariable(variable));
     }
 
-    public Qregion(Path<? extends region> path) {
+    public QRegion(Path<? extends Region> path) {
         super(path.getType(), path.getMetadata());
     }
 
-    public Qregion(PathMetadata metadata) {
-        super(region.class, metadata);
+    public QRegion(PathMetadata metadata) {
+        super(Region.class, metadata);
     }
 
 }
