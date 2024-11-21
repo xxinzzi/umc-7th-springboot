@@ -8,7 +8,7 @@ import umc.spring.domain.Mission;
 import umc.spring.domain.Restaurant;
 import umc.spring.repository.MissionRepository.MissionRepository;
 import umc.spring.repository.RestaurantRepository.RestaurantRepository;
-import umc.spring.web.dto.MissionRequestDTO;
+import umc.spring.web.dto.Mission.MissionRequestDTO;
 import umc.spring.converter.MissionConverter;
 import umc.spring.apiPayload.code.status.ErrorStatus;
 

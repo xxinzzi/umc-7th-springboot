@@ -7,8 +7,8 @@ import umc.spring.apiPayload.ApiResponse;
 import umc.spring.converter.UserConverter;
 import umc.spring.domain.User;
 import umc.spring.service.UserService.UserCommandService;
-import umc.spring.web.dto.UserRequestDTO;
-import umc.spring.web.dto.UserResponseDTO;
+import umc.spring.web.dto.User.UserRequestDTO;
+import umc.spring.web.dto.User.UserResponseDTO;
 
 @RestController
 @RequiredArgsConstructor
