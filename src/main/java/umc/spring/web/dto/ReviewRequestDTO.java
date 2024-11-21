@@ -13,8 +13,10 @@ public class ReviewRequestDTO {
         @NotNull
         Long restaurantId;
         @NotNull
+        String title;
+        @NotNull
         String body;
         @NotNull
-        Float score;
+        Float rating;
     }
 }
