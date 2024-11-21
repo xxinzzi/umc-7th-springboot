@@ -34,7 +34,7 @@ public class UserCommandServiceImpl implements UserCommandService {
         List<MenuCategory> menuCategoryList = request.getPreferCategory().stream()
                 .map(categoryId ->
                         menuCategoryRepository.findById(categoryId)
-                                .orElseThrow(() -> new MenuCategoryHandler(ErrorStatus.MENU_CATEGORY__NOT_FOUND))
+                                .orElseThrow(() -> new MenuCategoryHandler(ErrorStatus.MENU_CATEGORY_NOT_FOUND))
                 ).collect(Collectors.toList());
 
         // UserPrefer 리스트 생성
