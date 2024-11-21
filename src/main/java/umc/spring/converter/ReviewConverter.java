@@ -9,8 +9,8 @@ import umc.spring.web.dto.ReviewRequestDTO;
 import java.time.LocalDateTime;
 
 public class ReviewConverter {
-    public static ReviewResponseDTO.AddReviewToStoreResultDto toReviewResultDto(Review review){
-        return ReviewResponseDTO.AddReviewToStoreResultDto.builder()
+    public static ReviewResponseDTO.AddReviewToRestaurantResultDto toReviewResultDto(Review review){
+        return ReviewResponseDTO.AddReviewToRestaurantResultDto.builder()
                 .reviewId(review.getId())
                 .createdAt(LocalDateTime.now())
                 .build();
