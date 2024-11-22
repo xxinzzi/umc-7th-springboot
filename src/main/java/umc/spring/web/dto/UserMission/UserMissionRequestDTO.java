@@ -5,7 +5,7 @@ import lombok.Getter;
 
 public class UserMissionRequestDTO {
     @Getter
-    public static class challengeUserMissionDto {
+    public static class challengeUserMissionDTO {
         @NotNull
         Long userID;
         @NotNull

@@ -9,7 +9,7 @@ public class UserMissionResponseDTO {
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class challengeUserMissionResultDto{
+    public static class challengeUserMissionResultDTO{
         Long missionId;
         Boolean isSuccess;
         LocalDateTime updatedAt;
