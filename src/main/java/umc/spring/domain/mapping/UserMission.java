@@ -23,7 +23,10 @@ public class UserMission extends BaseEntity {
     @JoinColumn(name = "mission_id")
     private Mission mission;
 
-    private boolean isSuccess;
-
     private int identificationNumber;
+
+    @Setter
+    @Builder.Default
+    @Column(columnDefinition = "BOOLEAN DEFAULT FALSE")
+    private boolean isSuccess = false;
 }

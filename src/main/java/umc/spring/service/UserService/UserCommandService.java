@@ -2,7 +2,7 @@ package umc.spring.service.UserService;
 
 import org.springframework.transaction.annotation.Transactional;
 import umc.spring.domain.User;
-import umc.spring.web.dto.UserRequestDTO;
+import umc.spring.web.dto.User.UserRequestDTO;
 
 public interface UserCommandService {
     @Transactional

@@ -13,7 +13,7 @@ import umc.spring.domain.User;
 import umc.spring.repository.RestaurantRepository.RestaurantRepository;
 import umc.spring.repository.ReviewRepository.ReviewRepository;
 import umc.spring.repository.UserRepository.UserRepository;
-import umc.spring.web.dto.ReviewRequestDTO;
+import umc.spring.web.dto.Review.ReviewRequestDTO;
 
 @Service
 @RequiredArgsConstructor

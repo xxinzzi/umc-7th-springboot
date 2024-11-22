@@ -2,8 +2,8 @@ package umc.spring.converter;
 
 import umc.spring.domain.Mission;
 import umc.spring.domain.Restaurant;
-import umc.spring.web.dto.MissionRequestDTO;
-import umc.spring.web.dto.MissionResponseDTO;
+import umc.spring.web.dto.Mission.MissionRequestDTO;
+import umc.spring.web.dto.Mission.MissionResponseDTO;
 
 import java.time.LocalDateTime;
 

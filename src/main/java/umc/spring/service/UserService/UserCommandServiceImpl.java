@@ -13,7 +13,7 @@ import umc.spring.domain.User;
 import umc.spring.domain.mapping.UserPrefer;
 import umc.spring.repository.MenuCategoryRepository.MenuCategoryRepository;
 import umc.spring.repository.UserRepository.UserRepository;
-import umc.spring.web.dto.UserRequestDTO;
+import umc.spring.web.dto.User.UserRequestDTO;
 
 import java.util.List;
 import java.util.stream.Collectors;
