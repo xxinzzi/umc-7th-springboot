@@ -10,4 +10,5 @@ import umc.spring.domain.Review;
 public interface ReviewRepository extends JpaRepository<Review, Long>{
     // 추가된 메서드
     Page<Review> findAllByRestaurantId(Long restaurantId, PageRequest pageRequest);
+    Page<Review> findAllByUserId(Long userId, PageRequest pageRequest);
 }

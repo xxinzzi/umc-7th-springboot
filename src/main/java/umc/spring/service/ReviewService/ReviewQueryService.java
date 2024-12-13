@@ -4,5 +4,6 @@ import org.springframework.data.domain.Page;
 import umc.spring.domain.Review;
 
 public interface ReviewQueryService {
-    Page<Review> getReviewList(Long restaurantId, Integer page);
+    Page<Review> getRestaurantReviewList(Long restaurantId, Integer page);
+    Page<Review> getUserReviewList(Long userId, Integer page);
 }
