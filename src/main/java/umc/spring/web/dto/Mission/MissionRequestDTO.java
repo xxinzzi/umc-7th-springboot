@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import umc.spring.validation.annotation.ExistCategories;
-import umc.spring.validation.annotation.ExistRetaurants;
+import umc.spring.validation.annotation.ExistRestaurants;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
 public class MissionRequestDTO {
     @Getter
     public static class AddMissionToRestaurantDto{
-        @ExistRetaurants
+        @ExistRestaurants
         Long restaurantId;
         @NotNull
         String missionSpec;

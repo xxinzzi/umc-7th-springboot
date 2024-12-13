@@ -3,16 +3,18 @@ package umc.spring.web.dto.Review;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
-import umc.spring.validation.annotation.ExistRetaurants;
+import lombok.Setter;
+import umc.spring.validation.annotation.ExistRestaurants;
 import umc.spring.validation.annotation.ExistUsers;
 
 public class ReviewRequestDTO {
 
     @Getter
+    @Setter
     public static class AddReviewToRestaurantDto{
         @ExistUsers
         Long userId;
-        @ExistRetaurants
+        @ExistRestaurants
         Long restaurantId;
         @NotNull
         String title;
