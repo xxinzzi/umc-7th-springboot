@@ -40,5 +40,4 @@ public class ReviewQueryServiceImpl implements ReviewQueryService{
         return reviewRepository.findAllByUserId(userId, pageRequest);
     }
 
-
 }
