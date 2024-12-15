@@ -32,6 +32,7 @@ public class UserPrefer extends BaseEntity {
         user.getUserPreferList().add(this);
     }
 
+
     public void setMenuCategory(MenuCategory menuCategory){
         this.menuCategory = menuCategory;
     }
