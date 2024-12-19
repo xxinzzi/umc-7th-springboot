@@ -26,12 +26,15 @@ public class UserConverter {
 
 
         return User.builder()
-                .address(request.getAddress())
-                .addressSpec(request.getAddressSpec())
+                .name(request.getName())
+                .email(request.getEmail())
+                .password(request.getPassword())
                 .gender(gender)
                 .birth(request.getBirth())
-                .name(request.getName())
+                .address(request.getAddress())
+                .addressSpec(request.getAddressSpec())
                 .userPreferList(new ArrayList<>()) //초기화
+                .role(request.getRole())
                 .build();
     }
 }

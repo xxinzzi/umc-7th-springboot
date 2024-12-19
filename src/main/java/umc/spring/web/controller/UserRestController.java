@@ -41,11 +41,13 @@ public class UserRestController {
     private final UserMissionQueryService userMissionQueryService;
 
     // 회원 가입
+
     @PostMapping("/")
     public ApiResponse<UserResponseDTO.JoinResultDTO> join(@RequestBody @Valid UserRequestDTO.JoinDto request) {
         User user = userCommandService.joinUser(request);
         return ApiResponse.onSuccess(UserConverter.toJoinResultDTO(user));
     }
+
 
     // 사용자 미션 도전
     @PostMapping("/{userId}/missions")

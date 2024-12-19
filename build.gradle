@@ -57,8 +57,10 @@ dependencies {
 	implementation 'org.antlr:antlr4:4.13.0'
 	implementation 'org.antlr:antlr4-runtime:4.13.0'
 
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	testImplementation 'org.springframework.security:spring-security-test'
 
-
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 }
 
 tasks.named('test') {

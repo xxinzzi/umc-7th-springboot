@@ -14,6 +14,7 @@ import umc.spring.domain.mapping.UserPrefer;
 import umc.spring.repository.MenuCategoryRepository.MenuCategoryRepository;
 import umc.spring.repository.UserRepository.UserRepository;
 import umc.spring.web.dto.User.UserRequestDTO;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -24,11 +25,14 @@ public class UserCommandServiceImpl implements UserCommandService {
 
     private final UserRepository userRepository;
     private final MenuCategoryRepository menuCategoryRepository; // MenuCategoryRepository 의존성 주입
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     @Transactional
     public User joinUser(UserRequestDTO.JoinDto request) {
         User newUser = UserConverter.toUser(request);
+
+        newUser.encodePassword(passwordEncoder.encode(request.getPassword()));
 
         // MenuCategory 리스트를 가져오기
         List<MenuCategory> menuCategoryList = request.getPreferCategory().stream()
@@ -37,12 +41,13 @@ public class UserCommandServiceImpl implements UserCommandService {
                                 .orElseThrow(() -> new MenuCategoryHandler(ErrorStatus.MENU_CATEGORY_NOT_FOUND))
                 ).collect(Collectors.toList());
 
-        // UserPrefer 리스트 생성
-        List<UserPrefer> userPreferList = UserPreferConverter.toUserPreferList(menuCategoryList);
-
-        // UserPrefer와 User 연관 설정
-        userPreferList.forEach(userPrefer -> {
-            userPrefer.setUser(newUser);
+        // UserPrefer 리스트 생성 및 User와 연관 설정
+        menuCategoryList.forEach(menuCategory -> {
+            UserPrefer userPrefer = UserPrefer.builder()
+                    .menuCategory(menuCategory)
+                    .user(newUser)
+                    .build();
+            newUser.getUserPreferList().add(userPrefer);
         });
 
         // User 저장

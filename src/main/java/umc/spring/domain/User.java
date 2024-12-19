@@ -12,6 +12,7 @@ import umc.spring.domain.mapping.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import umc.spring.domain.enums.Role;
 
 @Entity
 @Getter
@@ -35,6 +36,7 @@ public class User extends BaseEntity {
     @Column(columnDefinition = "VARCHAR(10)")
     private umc.spring.domain.enums.Gender gender;
 
+    @Column(nullable = false)
     private LocalDate birth;
 
     @Column(nullable = false, length = 50)
@@ -43,8 +45,14 @@ public class User extends BaseEntity {
     @Column(nullable = false, length = 30)
     private String addressSpec;
 
-    //@Column(nullable = false, length = 50)
+    @Column(nullable = false, unique = true)
     private String email;
+
+    @Column(nullable = false)
+    private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @ColumnDefault("0")
     private Integer point;
@@ -57,6 +65,10 @@ public class User extends BaseEntity {
     private UserStatus status;
 
     private LocalDate inactiveDate;
+
+    public void encodePassword(String password) {
+        this.password = password;
+    }
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @Builder.Default
