@@ -29,7 +29,7 @@ public class User extends BaseEntity {
     @Column(nullable = false, length = 20)
     private String name;
 
-    @Column(nullable = false, length = 20)
+    @Column(nullable = true, length = 20)
     private String nickname;
 
     @Enumerated(EnumType.STRING)
@@ -57,7 +57,8 @@ public class User extends BaseEntity {
     @ColumnDefault("0")
     private Integer point;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = true, length = 50)
+    @ColumnDefault("'default-image-url.png'") //기본값 설정
     private String imageUrl;
 
     @Enumerated(EnumType.STRING)

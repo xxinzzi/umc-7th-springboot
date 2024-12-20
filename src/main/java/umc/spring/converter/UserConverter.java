@@ -21,7 +21,8 @@ public class UserConverter {
         Gender gender = switch (request.getGender()) {
             case 1 -> Gender.MALE;
             case 2 -> Gender.FEMALE;
-            default -> Gender.NONE;
+            case 3 -> Gender.NONE;
+            default -> null;
         };
 
 
